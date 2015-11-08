@@ -10,7 +10,6 @@
     <!-- Your HTML -->
     <!-- ========= -->
 
-    <!-- App is loaded here -->
     <div id="container">Loading...</div>
 
     <!-- ========= -->
@@ -26,25 +25,23 @@
     <!-- =============== -->
 
     <script type="text/javascript">
-        // your JS code goes here
 
         var AppView = Backbone.View.extend({
-            // el stands for element. Every view has an element associated with it in HTML
-            // where content will be rendered
-            el: '#container',
+            el: $('#container'),
 
-            // the first function called when this view is instantiated
+            // template which has the placeholder 'who'
+            template: _.template("<h3>Hello <%= who %></h3>"),
+
             initialize: function(){
                 this.render();
             },
 
-            // $el is a cached jQuery object (el), in which you can use jQuery functions to push content
             render: function(){
-                this.$el.html("Hello World!");
+                //rendering, substituting 'who' for 'world!'
+                this.$el.html(this.template({who: 'your name!'}));
             }
         });
 
-    // initialize the view
     var AppView = new AppView();
     </script>
 
