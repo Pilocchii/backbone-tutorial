@@ -1,0 +1,4 @@
+Backbone is MVC:
+
+Views glue together user events (clicks, pressed keys, etc.), render HTML views and templates,
+and interact with models which contains the data of the application.
