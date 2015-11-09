@@ -1,4 +1,32 @@
 Backbone is MVC:
 
+--------------
+Models contain the interactive data and the logic surrounding it such as data validation, getters and setters,
+default values, data initialization, conversions and so on.
+
+--------------
 Views glue together user events (clicks, pressed keys, etc.), render HTML views and templates,
 and interact with models which contains the data of the application.
+
+4 basic properties in a view:
+    el - this.el is created from view's el, tagName, className, id, or attributes properties. If not specified, this
+    el is an empty div. view.$el is a cached jQueary obj of the view's element
+
+    initialize - pass parameters that will be attached to a model, collection, or view.el
+
+    render - injects the markup into elements. Not all views require having a render f(), they can call other views'
+    render functions
+
+    events - i.e. {"<EVENT_TYPE> <ELEMENT_ID>": "<CALLBACK_FUNCTION>"}
+            e.g. events: {'keypress #new-todo': 'createTodoOnEnter'}
+            jQ e.g. $('#new-todo').keypress(createTodoOnEnter);
+
+Every view must reference a
+DOM (Document Object Model), a representation of the html on the page as an object you can manipulate.
+
+--------------
+Controller
+--------------
+Collections are ordered sets of models, where you can get and set models in the collection, listen for events when
+any element in the collection changes, and fetching for model’s data from the server. Collections allows to save
+data (in database, file, memory), and it requires a reference to it.
