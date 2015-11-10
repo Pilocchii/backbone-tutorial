@@ -30,3 +30,5 @@ Controller
 Collections are ordered sets of models, where you can get and set models in the collection, listen for events when
 any element in the collection changes, and fetching for model’s data from the server. Collections allows to save
 data (in database, file, memory), and it requires a reference to it.
+
+CRUD
