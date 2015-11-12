@@ -1,5 +1,7 @@
 Backbone is MVC:
 
+User uses a controller, which manipulates a model, which updates a view, which shows the user what they want to see.
+
 --------------
 Models contain the interactive data and the logic surrounding it such as data validation, getters and setters,
 default values, data initialization, conversions and so on.
@@ -21,14 +23,18 @@ and interact with models which contains the data of the application.
             e.g. events: {'keypress #new-todo': 'createTodoOnEnter'}
             jQ e.g. $('#new-todo').keypress(createTodoOnEnter);
 
-Every view must reference a
-DOM (Document Object Model), a representation of the html on the page as an object you can manipulate.
+Every view must reference a DOM (Document Object Model), a representation of the html on the page as an object you can manipulate.
 
 --------------
-Controller
+Controllers accpet input and convert it to commands for the model or view
+
 --------------
 Collections are ordered sets of models, where you can get and set models in the collection, listen for events when
 any element in the collection changes, and fetching for model’s data from the server. Collections allows to save
 data (in database, file, memory), and it requires a reference to it.
 
-CRUD
+--------------
+Routes match URL patterns to functions. YOU can use parameter parts such as "todos/:id" or using splats "file/*path"
+you will match all the parameters from the splat on. A splat parameter should always be the last matcher.
+
+CRUD - Give it/add to a template, register to a view by initializing, giving it an event, and a method
