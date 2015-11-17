@@ -1,4 +1,9 @@
-Backbone is MVC:
+Objective: Learn backbone basics!
+
+Limitations: This tutorial is a singleton. I would like to learn how to create a webapp with
+multiple classes to more easily arrange my css, js, and html.
+
+Backbone is MVC -
 
 User uses a controller, which manipulates a model, which updates a view, which shows the user what they want to see.
 
